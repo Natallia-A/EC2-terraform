@@ -36,7 +36,6 @@ attach the Admin-Role to an instance
   backend "s3" {
     encrypt = true
   }
-}
 ```
 ## Notes on S3:
 bucket - s3 bucket name, has to be globally unique.
