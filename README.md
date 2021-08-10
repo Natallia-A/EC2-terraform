@@ -49,12 +49,19 @@ dynamodb_table - optional when you want to enable State Locking
    ## Using Ansible to install Docker we provide: 
    
    create vi /etc/ansible/hosts
+   
    insert your machine inside in file hosts
+   
    create docker.yaml
+   
    we can start to insert all the step for docker installation
+   
    install the dependency
+   
    install Docker
+   
    make sure that docker was started and enabled
+   
    ##  NOW LAUNCH ANSIBLE :
    ansible-playbook docker.yaml
    
