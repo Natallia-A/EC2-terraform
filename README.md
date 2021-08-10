@@ -48,19 +48,19 @@ dynamodb_table - optional when you want to enable State Locking
    * Resources can be destroyed using the terraform destroy command, which is similar to terraform apply but it behaves as if all of the resources have been removed from the configuration.
    ## Using Ansible to install Docker we provide: 
    
-   create vi /etc/ansible/hosts
+   * create vi /etc/ansible/hosts
    
-   insert your machine inside in file hosts
+  *  insert your machine inside in file hosts
    
-   create docker.yaml
+   * create docker.yaml
    
-   we can start to insert all the step for docker installation
+  *  we can start to insert all the step for docker installation
    
-   install the dependency
+  *  install the dependency
    
-   install Docker
+   * install Docker
    
-   make sure that docker was started and enabled
+  *  make sure that docker was started and enabled
    
    ##  NOW LAUNCH ANSIBLE :
    ansible-playbook docker.yaml
