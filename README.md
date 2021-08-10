@@ -15,8 +15,10 @@ The several benefits and features draw developers to Amazon EC2 for getting star
 * Ansible
 * Docker
 ## How to start:
+Clone the repo : git clone https://github.com/Natallia-A/EC2-terraform.git
 
-Create and lainch EC2 instance,attaching  the  Admin-Role .
+Create and launch EC2 instance
+attach the Admin-Role to an instance
 
  Install Terraform :
 
@@ -27,10 +29,23 @@ Create and lainch EC2 instance,attaching  the  Admin-Role .
     sudo unzip terraform_0.14.7_linux_amd64.zip 
     sudo mv  terraform /bin
     terraform   --version
+    Add below code in terraform configuration files:
+    provider.tf
+    
+    terraform {
+  backend "s3" {
+    encrypt = true
+  }
+}
+## Notes on S3:
+bucket - s3 bucket name, has to be globally unique.
+key - Set some meaningful names for different services and applications, such as vpc.tfstate, application_name.tfstate, etc
+dynamodb_table - optional when you want to enable State Locking
    ## RUN COMMANDS:
    * terraform init
    * terraform plan 
    * terraform apply 
+   * Resources can be destroyed using the terraform destroy command, which is similar to terraform apply but it behaves as if all of the resources have been removed from the configuration.
    ## Using Ansible to install Docker we provide: 
    
    create vi /etc/ansible/hosts
