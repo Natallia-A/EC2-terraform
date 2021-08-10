@@ -32,11 +32,12 @@ attach the Admin-Role to an instance
     Add below code in terraform configuration files:
     provider.tf
     
-    terraform {
+  ```  terraform {
   backend "s3" {
     encrypt = true
   }
 }
+```
 ## Notes on S3:
 bucket - s3 bucket name, has to be globally unique.
 key - Set some meaningful names for different services and applications, such as vpc.tfstate, application_name.tfstate, etc
